@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <div class="weather-wrapper">
+        <div id="home-page" class="page visible">
+            <h1>Weather Forecast</h1>
+            <form id="search-form" class="city-form">
+                <div class="input-wrapper">
+                    <input type="text" id="city-search" placeholder="Type city name">
+                    <button class="search-btn">Search</button>
+                </div>
+                <p>or</p>
+                <button id="locate-btn" class="locate-btn">Use Current Location</button>
+            </form>
+        </div>
+        <div id="forecast-page" class="page hidden">
+            <button id="home-btn" class="back-btn"><i class="material-icons">arrow_back</i></button>
+            <h1>Weather Forecast</h1>
+            <div class="location-time-section">
+                <h2 class="city-name">City</h2>
+                <p class="date-today">Today</p>
+            </div>
+            <div class="forecast-info">
+                <div class="forecast-description">
+                    <i class="wi"></i>
+                    <span class="forecast-condition">Condition</span>
+                </div>
+                <div class="temp">Temp</div>
+            </div>
+            <div class="extra-info">
+                <div class="feels-like-section">
+                    <i class="wi wi-thermometer"></i>
+                    <div>
+                        <h3 class="feels-like">Feels Like</h3>
+                    </div>
+                </div>
+                <div class="humidity-section">
+                    <i class="wi wi-raindrop"></i>
+                    <div>
+                        <h3 class="humidity">Humidity</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="loading-indicator hidden">Loading...</div>
+    <div class="error-message hidden">An error occurred while fetching the weather data. Please try again.</div>
+    <script src="scripts.js"></script>
+</body>
+</html>
